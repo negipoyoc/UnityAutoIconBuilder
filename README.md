@@ -12,12 +12,15 @@ Unityでビルド時に自動でアイコンを生成し設定してくれるも
 # 使用法
 [こちら](https://github.com/negipoyoc/UnityAutoIconBuilder/releases/download/v1.0/UnityAutoIconBuilder.unitypackage)からunitypackageを取得し、自分のプロジェクトに展開してください。
 
-Assets/UnityAutoIconBuilder/Scene/IconEdit.unity　で自動出力される画像を任意のものに編集できます。
+それだけで終わりです。
 
 注意：自動でビルド時にテクスチャが設定されます！今まで設定していたものがあれば上書きされるので注意。
 
 ## Tips
-### PC向けからAndroidやiOS向けに変えたい時は
+### 出力される画像を編集したい時
+Assets/UnityAutoIconBuilder/Scene/IconEdit.unity　で自動出力される画像を任意のものに編集できます。
+
+### PC向けからAndroidやiOS向けに変えたい時(または画像の出力サイズを変えたい時)
 1.RenderTexture(Assets/UnityAutoIconBuilder/Res/ConfigrationImageRenderTexture.renderTexture)のサイズを変更する。
 
 2.IconEdit.unityを開き、AndroidやiOS向けに出力される画像を編集したあとPrefabを更新して閉じる。
