@@ -18,7 +18,7 @@ Assets/UnityAutoIconBuilder/Scene/IconEdit.unity　で自動出力される画�
 
 ## Tips
 ### PC向けからAndroidやiOS向けに変えたい時は
-1.RenderTexture(UnityAutoIconBuilder/UnityAutoIconBuilder/Assets/UnityAutoIconBuilder/Res/ConfigrationImageRenderTexture.renderTexture)のサイズを変更する。
+1.RenderTexture(Assets/UnityAutoIconBuilder/Res/ConfigrationImageRenderTexture.renderTexture)のサイズを変更する。
 
 2.IconEdit.unityを開き、AndroidやiOS向けに出力される画像を編集したあとPrefabを更新して閉じる。
 
