@@ -22,7 +22,7 @@ Assets/UnityAutoIconBuilder/Scene/IconEdit.unity　で自動出力される画�
 
 2.IconEdit.unityを開き、AndroidやiOS向けに出力される画像を編集したあとPrefabを更新して閉じる。
 
-3.UnityIconCustomizerの以下の部分を参考に、出力される画像の設定先をFixする
+3.UnityIconCustomizerの以下の部分を参考に、出力される画像の設定先をFixする<br>
 https://github.com/makoto-unity/UnityIconCustomizer/blob/85123e94568d4ea4c60ed3eb9a2b33cf9e589e51/Assets/UnityIconCustomizer/Scripts/Editor/IconBuilder.cs#L11
 
 ### 解説記事
