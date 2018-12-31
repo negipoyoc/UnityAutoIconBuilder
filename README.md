@@ -1,25 +1,34 @@
-WIP
-
 # UnityAutoIconBuilder
 Unityでビルド時に自動でアイコンを生成し設定してくれるものです。
 
 [UnityIconCustomizer](https://github.com/makoto-unity/UnityIconCustomizer)をベースに、
 
-* PC向けに出力サイズを変更 
+* PC向けに出力サイズと出力場所を変更 
 * ビルド時に自動生成する
 
 といった改造をしています。
 
 
 # 使用法
-[こちら]()からunitypackageを取得し、自分のプロジェクトに展開してください。
+[こちら](https://github.com/negipoyoc/UnityAutoIconBuilder/releases/download/v1.0/UnityAutoIconBuilder.unitypackage)からunitypackageを取得し、自分のプロジェクトに展開してください。
 
-あとは自動でビルド時にテクスチャが設定されます！
+Assets/UnityAutoIconBuilder/Scene/IconEdit.unity　で自動出力される画像を任意のものに編集できます。
 
-## 注意点
-* PC向けからAndroidやiOS向けに変えたい時は、
-* 設定されるテクスチャを変えたい時は
+注意：自動でビルド時にテクスチャが設定されます！今まで設定していたものがあれば上書きされるので注意。
 
+## Tips
+### PC向けからAndroidやiOS向けに変えたい時は
+1.RenderTexture(UnityAutoIconBuilder/UnityAutoIconBuilder/Assets/UnityAutoIconBuilder/Res/ConfigrationImageRenderTexture.renderTexture)のサイズを変更する。
+
+2.IconEdit.unityを開き、AndroidやiOS向けに出力される画像を編集したあとPrefabを更新して閉じる。
+
+3.UnityIconCustomizerの以下の部分を参考に、出力される画像の設定先をFixする
+https://github.com/makoto-unity/UnityIconCustomizer/blob/85123e94568d4ea4c60ed3eb9a2b33cf9e589e51/Assets/UnityIconCustomizer/Scripts/Editor/IconBuilder.cs#L11
+
+### 解説記事
+https://negipoyoc.com/blog/autoicongen/
+
+に書いています。
 
 # 権利表記
 使用させていただいたものに関して以下に表記します。
