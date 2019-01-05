@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4173079658851044}
+  - component: {fileID: 114652866730170236}
   m_Layer: 0
   m_Name: ConfigrationImageGenSystem
   m_TagString: Untagged
@@ -308,6 +309,20 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114652866730170236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1025982004082456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37efaca9a96aa4162b124718bc310ba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Version: {fileID: 114970132978686348}
+  VersionFormat: Ver {0}
+  Camera: {fileID: 20463187276955380}
 --- !u!114 &114805897749678650
 MonoBehaviour:
   m_ObjectHideFlags: 1
