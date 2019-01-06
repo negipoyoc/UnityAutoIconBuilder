@@ -26,17 +26,15 @@ public class AutoIconBuilder : IPreprocessBuildWithReport
     public static void GenerateConfigrationImage()
     {
         // Icon を生成。まずは元となるPrefabを読みこんでその中身を変える
-        GameObject iconGenPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(configImagePrefabPath);
-        GameObject iconGen = Object.Instantiate(iconGenPrefab);
+        var iconGenPrefab = AssetDatabase.LoadAssetAtPath<GenSystemPrefab>(configImagePrefabPath);
+        var iconGen = Object.Instantiate(iconGenPrefab);
 
         // バージョン番号
-        var texts = iconGen.GetComponentsInChildren<Text>();
-        string verStr = "Ver " + Application.version;
-        Assert.IsTrue(texts[1].gameObject.name == "Version"); // 念のため確認
-        texts[1].text = verStr;
+        string verStr = string.Format(iconGen.VersionFormat, Application.version);
+        iconGen.Version.text = verStr;
 
         // RenderTexture に焼き込んだ画像をTexture2Dにする
-        Camera camera = iconGen.GetComponentInChildren<Camera>();
+        Camera camera = iconGen.Camera;
         camera.Render();
         RenderTexture original = RenderTexture.active;
         RenderTexture.active = camera.targetTexture;
@@ -55,7 +53,7 @@ public class AutoIconBuilder : IPreprocessBuildWithReport
 
         // 後片付け
         Object.DestroyImmediate(newTexture);
-        Object.DestroyImmediate(iconGen);
+        Object.DestroyImmediate(iconGen.gameObject);
 
         AssetDatabase.Refresh();
     }
